@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/hNfltGNe6XJ8xaKGLG4ZpWJjRjUVRrjlcO/kiqHi5A1yArk08+VD+UUZM//oafc/oeZ29KRU39b0sS7PfkBUw==",
+  "success": true,
+  "projectFilePath": "M:\\WA\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\racek\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.20\\microsoft.netcore.app.host.linux-x64.6.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

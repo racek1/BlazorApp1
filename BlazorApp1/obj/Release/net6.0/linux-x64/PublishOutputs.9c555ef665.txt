@@ -1,0 +1,7 @@
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.dll
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.deps.json
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.runtimeconfig.json
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.pdb
