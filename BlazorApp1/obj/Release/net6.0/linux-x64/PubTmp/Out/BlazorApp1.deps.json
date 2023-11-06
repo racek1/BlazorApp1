@@ -8,8 +8,19 @@
     ".NETCoreApp,Version=v6.0": {},
     ".NETCoreApp,Version=v6.0/linux-x64": {
       "BlazorApp1/1.0.0": {
+        "dependencies": {
+          "MySqlConnector": "2.2.7"
+        },
         "runtime": {
           "BlazorApp1.dll": {}
+        }
+      },
+      "MySqlConnector/2.2.7": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.7.0"
+          }
         }
       }
     }
@@ -19,6 +30,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MySqlConnector/2.2.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rwFa71MlOJ142S+BXDvtLRdAIn7l6PTNWu+Xehs2qRehK8dckjKqwvK8azEADCMkQyXS1LXgh9HkSvItpTi6WA==",
+      "path": "mysqlconnector/2.2.7",
+      "hashPath": "mysqlconnector.2.2.7.nupkg.sha512"
     }
   }
 }

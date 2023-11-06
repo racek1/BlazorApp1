@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>M:\WA\BlazorApp1\BlazorApp1\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-11-06T07:01:07.5577333Z;</History>
+    <History>True|2023-11-06T07:53:25.9150167Z;True|2023-11-06T08:01:07.5577333+01:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

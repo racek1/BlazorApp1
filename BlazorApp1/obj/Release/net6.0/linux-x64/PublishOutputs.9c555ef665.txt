@@ -5,3 +5,4 @@ M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.d
 M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.deps.json
 M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.runtimeconfig.json
 M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\BlazorApp1.pdb
+M:\WA\BlazorApp1\BlazorApp1\obj\Release\net6.0\linux-x64\PubTmp\Out\MySqlConnector.dll
