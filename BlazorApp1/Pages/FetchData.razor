@@ -3,46 +3,80 @@
 <PageTitle>Weather forecast</PageTitle>
 
 @using BlazorApp1.Data
+@using MySqlConnector
 @inject WeatherForecastService ForecastService
 
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<h2>Registration</h2>
+<form action="register.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required @bind="regUsername"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" required @bind="regPassword"><br><br>
+
+    <input type="submit" value="Register" @onclick="RegisterUser">
+</form>
+
+<h2>Login</h2>
+<form action="login.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required @bind="logUsername"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" required @bind="logPassword"><br><br>
+
+    <input type="submit" value="Login" @onclick="LoginUser">
+</form>
+
 
 @code {
-    private WeatherForecast[]? forecasts;
+    string regUsername;
+    string regPassword;
+    string logUsername;
+    string logPassword;
+    string connectionString = "Server=http://sql11.freemysqlhosting.net/;Database=sql11659624;User=sql11659624;Password=DKK3FqdZiP;";
 
-    protected override async Task OnInitializedAsync()
+    private void RegisterUser()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
+        {
+            connection.Open();
+            string query = "INSERT INTO credentials (username, password) VALUES (@username, @password)";
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@username", regUsername);
+                cmd.Parameters.AddWithValue("@password", regPassword);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+    }
+
+    void LoginUser()
+    {
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
+        {
+            connection.Open();
+            string query = "SELECT id FROM credentials WHERE username = @username AND password = @password";
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@username", logUsername);
+                cmd.Parameters.AddWithValue("@password", logPassword);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null)
+                {
+                    // Successful login, proceed to the application
+                }
+                else
+                {
+                    // Failed login, show an error message
+                }
+            }
+        }
     }
 }
